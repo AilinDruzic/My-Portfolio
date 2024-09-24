@@ -6,17 +6,18 @@ export default function Education() {
   return (
     <section
       id="Education"
-      className="flex justify-center items-center h-screen text-3xl font-bold mt-24 font-mono"
+      className="flex justify-center items-center h-auto text-3xl font-bold mt-24 font-mono"
     >
       <div className="text-center">
         <h1 className="mb-20 text-4xl">Education</h1>
-        <div className="flex space-x-24">
+        {/* Flex layout för att växla mellan rad och kolumn */}
+        <div className="flex flex-col custom-xl:flex-row custom-xl:space-x-24 space-y-12 custom-xl:space-y-0 justify-center items-center">
           <div className="h-[600px] w-[350px] bg-transparent rounded-xl shadow-md border-4 border-white">
             <div className="mt-28">
               <SchoolIcon style={{ color: "secondary", fontSize: "100" }} />
             </div>
             <div className="font-medium">
-              <h2 className="mt-8 mb-2">Frontend-developer <br></br>training</h2>
+              <h2 className="mt-8 mb-2">Frontend-developer <br /> training</h2>
               <p className="mb-2">@</p>
               <p>Chas Academy</p>
               <p className="mt-10">2022-2024</p>
@@ -38,7 +39,7 @@ export default function Education() {
               <DvrIcon style={{ color: "secondary", fontSize: "100" }} />
             </div>
             <div className="font-medium">
-              <h2 className="mt-8 mb-2">Web-developer <br></br>course</h2>
+              <h2 className="mt-8 mb-2">Web-developer <br /> course</h2>
               <p className="mb-2">@</p>
               <p>Udemy</p>
               <p className="mt-10">2024</p>

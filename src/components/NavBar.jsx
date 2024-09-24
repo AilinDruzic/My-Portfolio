@@ -1,4 +1,6 @@
 import { Link } from "react-scroll";
+import Image from 'next/image';
+
 
 export default function NavBar() {
   return (
@@ -12,8 +14,10 @@ export default function NavBar() {
             spy
             to="Ailin Druzic"
           >
-          <img src="/images/add.png"
+          <Image src="/images/add.png"
           alt="Ailin Druzic Logo"
+          width={200}
+          height={100}
           className="h-10"
 
           />
