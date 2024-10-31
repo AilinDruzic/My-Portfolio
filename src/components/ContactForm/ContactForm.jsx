@@ -40,12 +40,12 @@ const ContactForm = () => {
     <section className="flex justify-center items-center">
       <form
         ref={formRef}
-        className="max-w-xl w-full py-6 px-8 rounded-lg  text-zinc-700"
+        className="max-w-xl w-full py-6 px-8 rounded-lg  text-white"
         onSubmit={onSubmit}
       >
-        <h2 className="text-2xl text-center">Contact me</h2>
+        <h2 className="text-2xl text-center font-bruno">Contact me</h2>
         <div className="">
-          <label className="text-lg">Full Name</label>
+          <label className="text-lg font-bruno">Full Name</label>
           <input
             type="text"
             className="w-full h-10 bg-transparent border-solid rounded-md border-2 text-xl p-4 mt-2 font-normal"
@@ -55,7 +55,7 @@ const ContactForm = () => {
           />
         </div>
         <div className="mt-2">
-          <label className="text-lg">Email</label>
+          <label className="text-lg font-bruno">Email</label>
           <input
             type="email"
             className="w-full h-10 bg-transparent border-solid rounded-md border-2 text-xl p-4 mt-2 font-normal"
@@ -65,7 +65,7 @@ const ContactForm = () => {
           />
         </div>
         <div className="mt-2">
-          <label className="text-lg">Message</label>
+          <label className="text-lg font-bruno">Message</label>
           <textarea
             name="message"
             id=""
@@ -76,7 +76,7 @@ const ContactForm = () => {
         </div>
         <button
           type="submit"
-          className="text-lg w-full h-8 bg-purple-300 hover:bg-purple-400 text-white rounded-md"
+          className="text-base w-full h-10 bg-blue-700 hover:bg-blue-900 rounded-md text-white mt-4"
         >
           Send Message
         </button>

@@ -6,12 +6,12 @@ export default function Talk() {
   return (
     <>
     <section
-      className="w-full h-[600px] rounded-3xl shadow-xl
-      text-3xl font-bold bg-slate-100 mb-6"
+      className="w-full h-[600px]
+      text-3xl font-bold mb-6"
       id="Talk"
     >
-      <h1 className="font-extrabold text-transparent text-4xl bg-clip-text bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-100 pt-10 pl-16">
-        Lets Talk!
+      <h1 className="font-extrabold text-transparent text-4xl text-talkColor  pt-10 pl-16">
+        Let&apos;s Talk!
       </h1>
       <div>
         <ContactForm />

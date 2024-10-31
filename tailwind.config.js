@@ -16,6 +16,13 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+        colors: {
+          bgColor: '#080133', 
+          talkColor: '#9e8671'
+        },
+        fontFamily: {
+          bruno: ['"Bruno Ace SC"', 'sans-serif'], 
+        },
       keyframes: {
         typing: {
           "0%": {
