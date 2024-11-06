@@ -21,7 +21,7 @@ const HorizontalScrollCarousel = () => {
   return (
     <section ref={targetRef} className="relative h-[300vh]">
       <div className="absolute top-10 left-0 right-0 w-full text-center z-10">
-        <h2 className="mt-24 text-4xl font-bold font-bruno">Projects</h2>
+        <h1 className="mt-16 text-3xl md:text-5xl  font-bold font-bruno">Projects</h1>
       </div>
       <div className="sticky top-32 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-4">

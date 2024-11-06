@@ -26,7 +26,7 @@ export default function Technologies() {
 
   return (
     <section className="mt-28" id="Technologies">
-      <h1 className="mb-20 text-4xl font-bruno text-center font-bold">Technologies</h1>
+      <h1 className="mb-20 text-3xl md:text-5xl font-bruno text-center font-bold">Technologies</h1>
       <div className="flex flex-wrap justify-center gap-6">
         {icons.map(({ component: Icon, color, delay }, index) => (
           <motion.div

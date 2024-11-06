@@ -12,14 +12,14 @@ export default function Home() {
     >
       <div className="flex flex-col items-center md:items-start max-w-3xl px-8 justify-center md:justify-between">
         <div className="text-center md:text-left">
-          <div className="text-8xl text-white font-bold mb-4 font-bruno">Ailin Druzic</div>
-          <div className="text-4xl text-white font-bold mb-4 font-bruno">Frontend Developer</div>
+          <div className="text-5xl md:text-8xl text-white font-bold mb-4 font-bruno">Ailin Druzic</div>
+          <div className="text-2xl md:text-4xl text-white font-bold mb-4 font-bruno">Frontend Developer</div>
           <div className="flex justify-center md:justify-start space-x-4">
             <a href="https://www.linkedin.com/in/ailin-druzic-967696253/">
-              <LinkedInIcon style={{ color: "white", fontSize: "50" }} />
+              <LinkedInIcon style={{ color: "white", fontSize: "40" }} />
             </a>
             <a href="https://github.com/AilinDruzic">
-              <GitHubIcon style={{ color: "white", fontSize: "50" }} />
+              <GitHubIcon style={{ color: "white", fontSize: "40" }} />
             </a>
           </div>
         </div>

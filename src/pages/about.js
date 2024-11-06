@@ -9,7 +9,7 @@ export default function About() {
     >
       <div className="flex flex-col xl:flex-row items-center justify-center h-full px-5 xl:px-20">
         <motion.div
-          initial={{ x: -200, opacity: 0 }}
+            initial={{ x: window.innerWidth < 768 ? -50 : -200, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.7 }}
           viewport={{ amount: 0.5 }} 
@@ -25,7 +25,7 @@ export default function About() {
           />
         </motion.div>
         <motion.p
-          initial={{ x: 200, opacity: 0 }}
+          initial={{ x: window.innerWidth < 768 ? 50 : 200, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.7 }}
           viewport={{ amount: 0.5 }}

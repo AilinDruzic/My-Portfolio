@@ -2,22 +2,21 @@ import { motion } from "framer-motion";
 
 export default function Experience() {
   const fadeInFromRight = (delay = 0) => ({
-    initial: { x: 100, opacity: 0 },
+    initial: { x: window.innerWidth < 768 ? 20 : 100, opacity: 0 },
     whileInView: { x: 0, opacity: 1 },
-    transition: { duration: 0.6, delay },
+    transition: { duration: 0.7, delay },
     viewport: { amount: 0.5 },
   });
 
   return (
-    <section id="Experience" className="mt-28 px-8 text-gray-200">
-      <h1 className="mb-20 text-5xl font-bruno text-center font-bold tracking-wide text-white">
+    <section id="Experience" className="mt-28 px-8 text-gray-200 overflow-x-hidden">
+      <h1 className="mb-20 text-3xl md:text-5xl font-bruno text-center font-bold tracking-wide text-white">
         Experience
       </h1>
       <div className="space-y-16">
-        {/* Erfarenhet 1 */}
-        <div className="flex flex-col md:flex-row items-start md:items-center space-y-6 md:space-y-0 md:space-x-10">
+        <div className="flex flex-col md:flex-row items-start md:items-center space-y-6 md:space-y-0 md:space-x-4">
           <p className="text-lg font-semibold w-32 md:text-right text-gray-400">2023 - 2024</p>
-          <motion.div {...fadeInFromRight(0)} className="text-left space-y-4 max-w-3xl">
+          <motion.div {...fadeInFromRight(0)} className="text-left space-y-4 max-w-full md:max-w-3xl">
             <motion.h2
               {...fadeInFromRight(0.2)}
               className="text-2xl font-semibold text-white tracking-wide"
@@ -53,10 +52,9 @@ export default function Experience() {
           </motion.div>
         </div>
 
-        {/* Erfarenhet 2 */}
-        <div className="flex flex-col md:flex-row items-start md:items-center space-y-6 md:space-y-0 md:space-x-10">
+        <div className="flex flex-col md:flex-row items-start md:items-center space-y-6 md:space-y-0 md:space-x-4">
           <p className="text-lg font-semibold w-32 md:text-right text-gray-400">2022 - 2024</p>
-          <motion.div {...fadeInFromRight(0)} className="text-left space-y-4 max-w-3xl">
+          <motion.div {...fadeInFromRight(0)} className="text-left space-y-4 max-w-full md:max-w-3xl">
             <motion.h2
               {...fadeInFromRight(0.2)}
               className="text-2xl font-semibold text-white tracking-wide"

@@ -4,7 +4,7 @@ import Talk from "./talk";
 import Home from "./home";
 
 import NavBar from "@/components/NavBar";
-import Education from "./experience";
+import Experience from "./experience";
 import Technologies from "./technologies";
 
 export default function Portfolio() {
@@ -16,7 +16,7 @@ export default function Portfolio() {
       </div>
       <div className="flex flex-col px-20">
         <About />
-        <Education />
+        <Experience />
         <Technologies/>
         <Projects />
         <Talk />
