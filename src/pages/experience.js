@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function Experience() {
   const fadeInFromRight = (delay = 0) => ({
-    initial: { x: window.innerWidth < 768 ? 20 : 100, opacity: 0 },
+    initial: { x: 50, opacity: 0 },
     whileInView: { x: 0, opacity: 1 },
     transition: { duration: 0.7, delay },
     viewport: { amount: 0.5 },
@@ -16,7 +16,10 @@ export default function Experience() {
       <div className="space-y-16">
         <div className="flex flex-col md:flex-row items-start md:items-center space-y-6 md:space-y-0 md:space-x-4">
           <p className="text-lg font-semibold w-32 md:text-right text-gray-400">2023 - 2024</p>
-          <motion.div {...fadeInFromRight(0)} className="text-left space-y-4 max-w-full md:max-w-3xl">
+          <motion.div
+            {...fadeInFromRight(0)}
+            className="text-left space-y-4 max-w-full md:max-w-3xl"
+          >
             <motion.h2
               {...fadeInFromRight(0.2)}
               className="text-2xl font-semibold text-white tracking-wide"
@@ -54,7 +57,10 @@ export default function Experience() {
 
         <div className="flex flex-col md:flex-row items-start md:items-center space-y-6 md:space-y-0 md:space-x-4">
           <p className="text-lg font-semibold w-32 md:text-right text-gray-400">2022 - 2024</p>
-          <motion.div {...fadeInFromRight(0)} className="text-left space-y-4 max-w-full md:max-w-3xl">
+          <motion.div
+            {...fadeInFromRight(0)}
+            className="text-left space-y-4 max-w-full md:max-w-3xl"
+          >
             <motion.h2
               {...fadeInFromRight(0.2)}
               className="text-2xl font-semibold text-white tracking-wide"
