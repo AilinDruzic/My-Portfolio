@@ -21,7 +21,7 @@ const HorizontalScrollCarousel = () => {
   return (
     <section ref={targetRef} className="relative h-[300vh]">
       <div className="absolute top-10 left-0 right-0 w-full text-center z-10">
-        <h1 className="mt-16 text-3xl md:text-5xl  font-bold font-bruno">Projects</h1>
+        <h1 className="mt-16 text-3xl md:text-5xl font-bold font-bruno text-white">Projects</h1>
       </div>
       <div className="sticky top-32 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-4">
@@ -39,7 +39,7 @@ const Card = ({ card }) => {
     <a href={card.link} target="_blank" rel="noopener noreferrer" className="group">
       <div
         key={card.id}
-        className="group relative h-[400px] w-[600px] overflow-hidden bg-neutral-200 rounded-lg"
+        className="group relative h-[300px] w-[80vw] md:h-[400px] md:w-[600px] overflow-hidden bg-neutral-200 rounded-lg"
       >
         <div
           style={{
@@ -50,10 +50,10 @@ const Card = ({ card }) => {
           className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
         ></div>
         <div className="absolute inset-0 z-10 flex flex-col justify-center bg-white bg-opacity-0 transition-opacity duration-300 group-hover:bg-opacity-100">
-          <h3 className="text-2xl font-bold text-black opacity-0 group-hover:opacity-100 mx-8">
+          <h3 className="text-xl md:text-2xl font-bold text-black opacity-0 group-hover:opacity-100 mx-4 md:mx-8">
             {card.title}
           </h3>
-          <p className="mt-2 text-lg items-center text-black opacity-0 group-hover:opacity-100 mx-8 font-semibold">
+          <p className="mt-2 text-sm md:text-lg items-center text-black opacity-0 group-hover:opacity-100 mx-4 md:mx-8 font-semibold">
             {card.description}
           </p>
         </div>
@@ -69,7 +69,7 @@ const cards = [
     url: "/images/examensarbete.png",
     title: "Thesis Project",
     description:
-      "Undies Webshop is a responsive, user-friendly online store focused on selling niche underwear products. The site prioritizes simplicity and ease of navigation, featuring a sleek design, a categorized product menu, a search function, and a streamlined checkout process. Developed with: Tailwind, React/Next.js, TypeScript, and MongoDB. ",
+      "Undies Webshop is a responsive, user-friendly online store focused on selling niche underwear products. The site prioritizes simplicity and ease of navigation, featuring a sleek design, a categorized product menu, a search function, and a streamlined checkout process. Developed with: Tailwind, React/Next.js, TypeScript, and MongoDB.",
     id: 1,
     link: "https://undies-exarbete.vercel.app/",
   },

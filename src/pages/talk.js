@@ -18,12 +18,12 @@ export default function Talk() {
       </div>
     </section>
     <div className="flex flex-row-reverse mb-4 mr-1">
-            <div className="animate-bounce">
+            <div className="animate-bounce text-white">
             <a href="https://github.com/AilinDruzic">
                 <GitHubIcon style={{ color: "secondary", fontSize: "50" }} />
               </a>
             </div>
-            <div className="mr-1 animate-bounce">
+            <div className="mr-1 animate-bounce text-white">
             <a href="https://www.linkedin.com/in/ailin-druzic-967696253/">
                 <LinkedInIcon style={{ color: "secondary", fontSize: "50" }} />
               </a>

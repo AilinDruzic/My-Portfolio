@@ -14,7 +14,7 @@ export default function Portfolio() {
       <div>
         <Home />
       </div>
-      <div className="flex flex-col px-20">
+      <div className="flex flex-col px-6 md:px-20">
         <About />
         <Experience />
         <Technologies/>

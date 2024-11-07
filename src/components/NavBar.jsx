@@ -8,7 +8,7 @@ export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="flex fixed top-0 z-50 w-full h-20 px-10 py-5 font font-bruno">
+    <header className="flex fixed top-0 z-50 w-full h-20 px-10 py-5 font font-bruno text-white">
       <div className="flex w-full justify-between items-center">
         <div className="text-xl font-semibold">
           <Link
