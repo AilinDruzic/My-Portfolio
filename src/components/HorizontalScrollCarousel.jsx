@@ -66,11 +66,19 @@ export default Example;
 
 const cards = [
   {
+    url: "/images/wcag.png",
+    title: "WCAG Checker",
+    description:
+      "WCAG-Checker is an accessibility analysis tool that evaluates websites based on WCAG guidelines. It identifies issues like contrast problems, missing alt text, and incorrect ARIA attributes, presenting results in a clear, categorized format. Developed with: React, Next.js, Chakra UI, TypeScript, axe-core, and JSDOM.",
+    id: 1,
+    link: "https://wcag-checker.vercel.app/",
+  },
+  {
     url: "/images/examensarbete.png",
     title: "Thesis Project",
     description:
       "Undies Webshop is a responsive, user-friendly online store focused on selling niche underwear products. The site prioritizes simplicity and ease of navigation, featuring a sleek design, a categorized product menu, a search function, and a streamlined checkout process. Developed with: Tailwind, React/Next.js, TypeScript, and MongoDB.",
-    id: 1,
+    id: 2,
     link: "https://undies-exarbete.vercel.app/",
   },
   {
@@ -78,7 +86,7 @@ const cards = [
     title: "Quiz app",
     description:
       "An interactive quiz app where users answer questions and get immediate feedback. Built with React and Redux, it’s designed to be responsive and work well on any device. Developed with: React, Redux, JavaScript, and CSS.",
-    id: 2,
+    id: 3,
     link: "https://quiz-redux-two.vercel.app/",
   },
   {
@@ -86,7 +94,7 @@ const cards = [
     title: "Number guessing game",
     description:
       "A simple and engaging number guessing game where users input guesses and receive feedback until they find the correct number. Designed to be intuitive and enjoyable. Developed with: HTML, CSS, and JavaScript.",
-    id: 3,
+    id: 4,
     link: "https://ailindruzic.github.io/Guessing-Game/",
   },
   {
@@ -94,7 +102,7 @@ const cards = [
     title: "Gym locker project",
     description:
       "The Gym Locker Reserve App is a simple application designed to help gym members reserve the next available locker. The app displays gym lockers, indicating which ones are free or occupied, and allows users to reserve a locker with a single button click. Each reserved locker is visually distinct to help users identify their reserved locker easily. The reservation logic ensures that lockers are spaced out as much as possible from previously taken ones. Developed with JavaScript, React, and CSS.",
-    id: 4,
+    id: 5,
     link: "https://github.com/AilinDruzic/Gym-project",
   },
   {
@@ -102,7 +110,7 @@ const cards = [
     title: "Radio player",
     description:
       "A radio player app built with React that allows users to stream various online radio stations. It includes basic playback controls and a simple, responsive design for an enjoyable listening experience. Developed with: React, JavaScript, and CSS.",
-    id: 5,
+    id: 6,
     link: "https://react-radio-player.vercel.app/",
   },
 ];
