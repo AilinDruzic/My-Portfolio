@@ -1,68 +1,8 @@
-import { Description } from "@mui/icons-material";
-import { motion, useTransform, useScroll } from "framer-motion";
-import { useRef } from "react";
-
-const Example = () => {
-  return (
-    <div className="">
-      <HorizontalScrollCarousel />
-    </div>
-  );
-};
-
-const HorizontalScrollCarousel = () => {
-  const targetRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-  });
-
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-98%"]);
-
-  return (
-    <section ref={targetRef} className="relative h-[300vh]">
-      <div className="absolute top-10 left-0 right-0 w-full text-center z-10">
-        <h1 className="mt-16 text-3xl md:text-5xl font-bold font-bruno text-white">Projects</h1>
-      </div>
-      <div className="sticky top-32 flex h-screen items-center overflow-hidden">
-        <motion.div style={{ x }} className="flex gap-4">
-          {cards.map((card) => {
-            return <Card card={card} key={card.id} />;
-          })}
-        </motion.div>
-      </div>
-    </section>
-  );
-};
-
-const Card = ({ card }) => {
-  return (
-    <a href={card.link} target="_blank" rel="noopener noreferrer" className="group">
-      <div
-        key={card.id}
-        className="group relative h-[300px] w-[80vw] md:h-[400px] md:w-[600px] overflow-hidden bg-neutral-200 rounded-lg"
-      >
-        <div
-          style={{
-            backgroundImage: `url(${card.url})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-          className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
-        ></div>
-        <div className="absolute inset-0 z-10 flex flex-col justify-center bg-white bg-opacity-0 transition-opacity duration-300 group-hover:bg-opacity-100">
-          <h3 className="text-xl md:text-2xl font-bold text-black opacity-0 group-hover:opacity-100 mx-4 md:mx-8">
-            {card.title}
-          </h3>
-          <p className="mt-2 text-sm md:text-lg items-center text-black opacity-0 group-hover:opacity-100 mx-4 md:mx-8 font-semibold">
-            {card.description}
-          </p>
-        </div>
-      </div>
-    </a>
-  );
-};
-
-export default Example;
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Pagination, Navigation } from "swiper/modules";
 
 const cards = [
   {
@@ -114,3 +54,87 @@ const cards = [
     link: "https://react-radio-player.vercel.app/",
   },
 ];
+
+const HorizontalScrollCarousel = () => {
+  return (
+    <section className="relative py-16">
+      <h1 className="text-3xl md:text-5xl font-bold text-center text-white font-bruno mb-8">
+        Projects
+      </h1>
+
+      <Swiper
+        modules={[Pagination, Navigation]}
+        spaceBetween={30}
+        pagination={{ clickable: true }}
+        navigation
+        breakpoints={{
+          768: { slidesPerView: 1 },
+          1024: { slidesPerView: 1 },
+          1440: { slidesPerView: 1 },
+        }}
+        className="px-8"
+        onInit={(swiper) => {
+          swiper.navigation.prevEl.classList.add(
+            "absolute",
+            "top-1/2",
+            "-translate-y-1/2",
+            "left-4",
+            "z-10",
+            "text-white",
+            "hidden",
+            "md:flex"
+          );
+          swiper.navigation.nextEl.classList.add(
+            "absolute",
+            "top-1/2",
+            "-translate-y-1/2",
+            "right-4",
+            "z-10",
+            "text-white",
+            "hidden",
+            "md:flex"
+          );
+        }}
+      >
+        {cards.map((card) => (
+          <SwiperSlide key={card.id}>
+            <Card card={card} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </section>
+  );
+};
+
+const Card = ({ card }) => {
+  return (
+    <div className="group relative h-[300px] w-[80vw] md:h-[400px] md:w-[600px] overflow-hidden bg-neutral-200 rounded-lg mx-auto pointer-events-none">
+      <div
+        style={{
+          backgroundImage: `url(${card.url})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+        className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110 pointer-events-none"
+      ></div>
+
+      <div className="absolute inset-0 bg-white bg-opacity-0 group-hover:bg-opacity-80 transition-opacity duration-300 pointer-events-none z-10"></div>
+
+      <a
+        href={card.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="relative flex flex-col justify-center items-center w-full h-full pointer-events-auto z-20"
+      >
+        <h3 className="text-xl md:text-2xl font-bold text-black opacity-0 group-hover:opacity-100 mx-4 md:mx-8 transition-opacity duration-300">
+          {card.title}
+        </h3>
+        <p className="mt-2 text-sm md:text-lg text-black opacity-0 group-hover:opacity-100 mx-4 md:mx-8 font-semibold transition-opacity duration-300">
+          {card.description}
+        </p>
+      </a>
+    </div>
+  );
+};
+
+export default HorizontalScrollCarousel;

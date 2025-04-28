@@ -8,6 +8,8 @@ import {
   SiTailwindcss,
   SiNodedotjs,
   SiGit,
+  SiWordpress,
+  SiAdobe,
 } from "react-icons/si";
 import { motion } from "framer-motion";
 
@@ -22,6 +24,8 @@ export default function Technologies() {
     { component: SiNextdotjs, color: "#000000", delay: 1.2 },
     { component: SiNodedotjs, color: "#339933", delay: 1.4 },
     { component: SiGit, color: "#F05032", delay: 1.6 },
+    { component: SiWordpress, color: "#3178C6", delay: 1.8 },
+    { component: SiAdobe, color: "#FF0000", delay: 2.0 },
   ];
 
   return (

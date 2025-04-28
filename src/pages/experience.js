@@ -14,8 +14,57 @@ export default function Experience() {
         Experience
       </h1>
       <div className="space-y-10 md:space-y-16">
-        
-        {/* Erfarenhet 1 */}
+                {/* Erfarenhet 1 */}
+                <div className="flex flex-col md:flex-row items-start md:items-center space-y-6 md:space-y-0 md:space-x-4 overflow-hidden">
+          <p className="text-lg font-semibold w-32 md:text-right text-gray-400">2025 jan - now</p>
+          <motion.div
+            {...fadeInFromRight(0)}
+            className="text-left space-y-4 max-w-[90%] md:max-w-3xl overflow-hidden"
+          >
+            <motion.h2
+              {...fadeInFromRight(0.2)}
+              className="text-xl md:text-2xl font-semibold text-white"
+            >
+              Svenska med baby - Frontend Developer/ Web Content Manager (Part time)
+            </motion.h2>
+            <motion.p {...fadeInFromRight(0.4)} className="text-base md:text-lg leading-relaxed text-gray-300">
+           - Maintain and update the organization&apos;s website using
+WordPress, including publishing upcoming events, news
+articles, and blog posts. <br></br><br></br>
+
+- Ensure all visual content and written information is accurately
+uploaded and displayed across the site according to
+organizational guidelines.<br></br><br></br>
+
+- Design flyers, banners, and promotional materials using Adobe
+Express, Acrobat, InDesign, and Photoshop, to promote
+upcoming community meetups and events.<br></br><br></br>
+
+- Support the organization&apos;s communication goals by keeping
+the website visually appealing, up-to-date, and functioning
+smoothly.
+
+            </motion.p>
+            <motion.div {...fadeInFromRight(0.6)} className="flex flex-wrap gap-2 md:gap-3 mt-4">
+              {[
+                "Wordpress",
+                "Adobe express",
+                "Acrobat",
+                "inDesign",
+                "Photoshop",
+              ].map((tech, index) => (
+                <span
+                  key={index}
+                  className="bg-gray-800 text-gray-300 px-2 py-1 md:px-3 md:py-1 rounded-md shadow-sm transition-transform transform hover:scale-105 hover:bg-gray-700"
+                >
+                  {tech}
+                </span>
+              ))}
+            </motion.div>
+          </motion.div>
+        </div>
+
+        {/* Erfarenhet 2 */}
         <div className="flex flex-col md:flex-row items-start md:items-center space-y-6 md:space-y-0 md:space-x-4 overflow-hidden">
           <p className="text-lg font-semibold w-32 md:text-right text-gray-400">2023 - 2024</p>
           <motion.div
@@ -57,7 +106,7 @@ export default function Experience() {
           </motion.div>
         </div>
 
-        {/* Erfarenhet 2 */}
+        {/* Erfarenhet 3 */}
         <div className="flex flex-col md:flex-row items-start md:items-center space-y-6 md:space-y-0 md:space-x-4 overflow-hidden">
           <p className="text-lg font-semibold w-32 md:text-right text-gray-400">2022 - 2024</p>
           <motion.div
